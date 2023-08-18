@@ -6,9 +6,7 @@ internal class Program
     {
         Console.WriteLine("Dotnet Secrets Console App example");
 
-        var settingsReader = new SettingsReader();
-
-        var credentials = settingsReader.ReadSection<Credentials>("ConsoleCredentials");
+        var credentials = SettingsReader.ReadSection<Credentials>("ConsoleCredentials");
 
         Console.WriteLine($"Credentials.Username: {credentials.Username}");
         Console.WriteLine($"Credentials.Password: {credentials.Password}");

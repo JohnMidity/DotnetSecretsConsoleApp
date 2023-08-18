@@ -2,9 +2,9 @@
 
 namespace DotnetSecretsConsoleApp;
 
-public class SettingsReader
+public static class SettingsReader
 {
-    public T ReadSection<T>(string sectionName)
+    public static T ReadSection<T>(string sectionName)
     {
         var environment = Environment.GetEnvironmentVariable("NETCORE_ENVIRONMENT");
         var builder = new ConfigurationBuilder()

@@ -1,10 +1,16 @@
-﻿namespace DotnetSecretsConsoleApp
+﻿namespace DotnetSecretsConsoleApp;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Dotnet Secrets Console App example");
-        }
+        Console.WriteLine("Dotnet Secrets Console App example");
+
+        var settingsReader = new SettingsReader();
+
+        var credentials = settingsReader.ReadSection<Credentials>("ConsoleCredentials");
+
+        Console.WriteLine($"Credentials.Username: {credentials.Username}");
+        Console.WriteLine($"Credentials.Password: {credentials.Password}");
     }
 }

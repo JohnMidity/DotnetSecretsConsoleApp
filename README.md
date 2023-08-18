@@ -1,5 +1,5 @@
 # DotnetSecretsConsoleApp
-.Net 6
+.Net 7
 
 ## To add your own secrets, local to your machine's user
 Edit the file 
